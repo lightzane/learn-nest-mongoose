@@ -114,6 +114,8 @@ export class User {
   @Prop({ default: Date.now })
   updatedAt?: Date;
 }
+
+export const UserSchema = SchemaFactory.createForClass(User);
 ```
 
 The `expires: 10` - will let the document to be automatically deleted after 10 seconds when not used.
