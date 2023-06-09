@@ -241,3 +241,15 @@ import { User, UserSchema } from './schemas/user.schema';
 })
 export class UserModule {}
 ```
+
+`user.service.ts`
+
+```ts
+@Injectable()
+export class BadukService {
+  constructor(
+    @InjectModel(User.name, 'usersConnection')
+    private readonly userModel: Model<User>,
+  ) {}
+}
+```
